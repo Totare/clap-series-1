@@ -6,7 +6,13 @@
  * ary = ["2d", "5s", "Ah"] val = "2h" alors inArray(ary, val) retournera false
  */
 function inArray(ary, val) {
-  // CODE HERE
+  let inArray = false;
+  ary.forEach(ar=> {
+    if (ar === val){
+      inArray = true;
+    };
+  });
+  return inArray;
 }
 
 export { inArray };
