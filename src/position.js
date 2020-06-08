@@ -11,7 +11,11 @@ const SOLAR_SYSTEM =
   ['Sun', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
 
 function position(planet) {
-  // CODE HERE
+  for (let i = 0; i < SOLAR_SYSTEM.length; i++) {
+    if(planet.toLowerCase() === SOLAR_SYSTEM[i].toLowerCase()){
+      return i;
+    };
+  }
 }
 
 export { position };
