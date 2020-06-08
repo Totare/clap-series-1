@@ -11,7 +11,31 @@
  */
 
 function isAFlush(cards) {
-  // CODE HERE
+  for( let i = 0 ; i < cards.length;i++){
+    cards[i] = cards[i].slice(-1)
+  };
+
+  cards.sort();
+  console.log(cards);
+  while(cards.length > 0){
+    let nb = numberOfSameColor(cards);
+    console.log(nb);
+    if (nb >= 5){
+      return true;
+    }
+  };
+  return false;
+}
+
+function numberOfSameColor(cards) {
+  let currentColor = cards.shift();
+  let i = 0;
+  let nb = 1;
+  while(currentColor === cards[i]){
+    nb++;
+    i++;
+  }
+  return nb
 }
 
 export { isAFlush };
