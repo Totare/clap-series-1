@@ -17,9 +17,33 @@
  * prime sur le type !
  * 
  */
+import { isAPair } from './isAPair.js';
+import { isAFlush } from './isAFlush.js';
+import { orderCards } from './orderCards.js';
 
 function bestCombo(cards) {
-  // CODE HERE
-}
+  let hand = cards;
+  let fullCards = cards;
+  let flushCards = cards;
+  let pairCards = cards;
+  console.log(hand);
+  if(isAFull(fullCards)){
+    console.log('full: ' + hand);
+  }else if(isAFlush(flushCards)){
+    console.log('flush: ' + hand);
+  }else if(isAPair(pairCards)){
+    console.log('pair: ' + hand);
+  }else{
+    console.log('highest: ' + hand);
+    // return orderCards(cards).splice(0,4);
+  };
+};
+
+
+function isAFull(cards){
+  return false;
+};
+
 
 export { bestCombo };
+
