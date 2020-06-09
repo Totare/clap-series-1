@@ -28,7 +28,22 @@ const CARDS = {
 }
 
 function occurences(cards) {
-  // CODE HERE
+  var occurences = {};
+  for(var [key, value] of Object.entries(CARDS)){
+    let countCard = 0;
+    cards.forEach(card=>{
+      let formatedCard = card[0];
+      let formatedCARD = value;
+      console.log(formatedCARD+' '+formatedCard );
+      if(formatedCard  === formatedCARD){
+        countCard++;
+      };
+    });
+    if(countCard != 0){
+      occurences[key] = countCard;
+    }
+  };
+  return occurences;
 }
 
 export { occurences };
