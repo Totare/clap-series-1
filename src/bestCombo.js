@@ -1,5 +1,5 @@
 /*
- * /!\ À faire à la fin, seul ou en groupe!
+ * /!en groupe!
  * Le tableau cards contient 7 cartes. L'objectif est de retourner les 5 cartes permettant de faire le 
  * meilleur combo possible :
  * 
@@ -22,19 +22,14 @@ import { isAFlush } from './isAFlush.js';
 import { orderCards } from './orderCards.js';
 
 function bestCombo(cards) {
-  let hand = cards;
-  let fullCards = cards;
-  let flushCards = cards;
-  let pairCards = cards;
-  console.log(hand);
-  if(isAFull(fullCards)){
-    console.log('full: ' + hand);
-  }else if(isAFlush(flushCards)){
-    console.log('flush: ' + hand);
-  }else if(isAPair(pairCards)){
-    console.log('pair: ' + hand);
+  if(isAFull(cards)){
+    console.log('full: ' + cards);
+  }else if(isAFlush(cards)){
+    console.log('flush: ' + cards);
+  }else if(isAPair(cards)){
+    console.log('pair: ' + cards);
   }else{
-    console.log('highest: ' + hand);
+    console.log('highest: ' + cards);
     // return orderCards(cards).splice(0,4);
   };
 };

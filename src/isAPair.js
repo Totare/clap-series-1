@@ -12,9 +12,10 @@
  
 function isAPair(cards) {
   let isAPair = false;
-  while(cards.length > 1){
-    let firstCard = cards.shift();
-    cards.forEach(card => {
+  let tmpCards = Object.values(Object.assign({}, cards));
+  while(tmpCards.length > 1){
+    let firstCard = tmpCards.shift();
+    tmpCards.forEach(card => {
       if (firstCard.slice(0, -1) === card.slice(0, -1)){
         isAPair = true;
       };
