@@ -34,7 +34,6 @@ function occurences(cards) {
     cards.forEach(card=>{
       let formatedCard = card[0];
       let formatedCARD = value;
-      console.log(formatedCARD+' '+formatedCard );
       if(formatedCard  === formatedCARD){
         countCard++;
       };
